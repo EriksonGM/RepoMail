@@ -1,6 +1,7 @@
 ﻿@model string
 @{
     ViewData["Title"] = "Home Page";
+    var time = new TimeSpan(Environment.TickCount);
 }
 
 <div class="text-center">
@@ -17,4 +18,19 @@
 </environment>
 <environment exclude="Development">
     <div>Não Desenvolvimento</div>
+    
 </environment>
+
+<ul>
+    <li><strong style="margin-right:5px">SystemDirectory:</strong>@Environment.SystemDirectory</li>
+    <li><strong style="margin-right:5px">Current Directory:</strong>@Environment.CurrentDirectory</li>
+    <li><strong style="margin-right:5px">CommandLine:</strong>@Environment.CommandLine</li>
+    <li><strong style="margin-right:5px">MachineName:</strong> @Environment.MachineName</li>
+    <li><strong style="margin-right:5px">Plataform:</strong>@Environment.OSVersion.Platform</li>
+    <li><strong style="margin-right:5px">Service Pack:</strong>@Environment.OSVersion.ServicePack</li>
+    <li><strong style="margin-right:5px">Version:</strong>@Environment.OSVersion.VersionString</li>
+    <li><strong style="margin-right:5px">UserName:</strong>@Environment.UserName</li>
+    <li><strong style="margin-right:5px">UserDomainName:</strong>@Environment.UserDomainName</li>
+    <li><strong style="margin-right:5px">TickCount:</strong>@Environment.TickCount</li>
+    <li><strong style="margin-right:5px">WorkingSet:</strong>@Environment.WorkingSet</li>
+</ul>
