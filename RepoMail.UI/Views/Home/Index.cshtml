@@ -18,7 +18,7 @@
 </environment>
 <environment exclude="Development">
     <div>Não Desenvolvimento</div>
-    
+
 </environment>
 
 <ul>
@@ -33,4 +33,11 @@
     <li><strong style="margin-right:5px">UserDomainName:</strong>@Environment.UserDomainName</li>
     <li><strong style="margin-right:5px">TickCount:</strong>@Environment.TickCount</li>
     <li><strong style="margin-right:5px">WorkingSet:</strong>@Environment.WorkingSet</li>
+</ul>
+
+<hr />
+<ul>
+    <li><strong style="margin-right: 5px">ASPNETCORE_ENVIRONMENT</strong>@Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</li>
+    <li><strong style="margin-right: 5px">QueryString</strong>@Environment.GetEnvironmentVariable("QueryString")</li>
+
 </ul>
